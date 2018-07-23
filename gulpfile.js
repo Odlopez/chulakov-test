@@ -57,7 +57,7 @@ gulp.task('bem-less', () => {
       elementSeparator: '__',
       modifierSeparator: '--'
     }))
-    .pipe(gulp.dest('source/css/f'));
+    .pipe(gulp.dest('source'));
 });
 
 gulp.task("copy", function () {
