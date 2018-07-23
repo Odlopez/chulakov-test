@@ -7,5 +7,104 @@
   <title>Test</title>
 </head>
 <body>
+<div class="container">
+  <aside class="aside">
+    <div class="logo">
+      <img src="img/logo.png" alt="Логотип Студии Олега Чулакова">
+    </div>
+    <nav class="navigation">
+      <ul class="navigation__menu menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">Первая ссылка</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--active" href="#">Вторая ссылка (активная)</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Третья ссылка</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--administrative" href="#">Личный кабинет</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link menu__link--administrative" href="#">Выйти</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <main class="main">
+    <header class="main__header header-main">
+      <h2 class="header-main__title">Заголовок страницы</h2>
+      <p class="header-main__description">
+        В отличие от пылевого и ионного хвостов, направление поступает
+        в лимногляциальный часовой угол
+      </p>
+    </header>
+    <section class="main__content main-content">
+      <div class="main-content__info info">
+        <h3 class="info__title">Информация по оплате:</h3>
+        <dl class="info__list">
+          <div class="info__inner">
+            <dt class="info__termin">
+              Нормер счета:
+            </dt>
+            <dd class="info__description">
+              1654654354643254
+            </dd>
+          </div>
+          <div class="info__inner">
+            <dt class="info__termin">
+              Сумма платежа:
+            </dt>
+            <dd class="info__description">
+              100 руб.
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <form class="main__form form" action="https://echo.htmlacademy.ru" method="POST">
+        <h3 class="form__title">Данные банковской карты</h3>
+        <div class="form__basic-data basic-data">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Номер карты</legend>
+            <input class="form__input input" type="text">
+            <input class="form__input input" type="text">
+            <input class="form__input input" type="text">
+            <input class="form__input input" type="text">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Срок действия</legend>
+            <select class="form__input input select" name="month" id="select-month"></select>
+            <select class="form__input input select" name="year" id="select-year"></select>
+          </fieldset>
+          <input class="form__input input" type="text" placeholder="Держатель карты">
+        </div>
+        <div class="form__additional-data">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Код CVV2 / CVC2</legend>
+            <input class="form__input form__input--srv input" type="text">
+          </fieldset>
+        </div>
+        <button type="submit">Оплатить</button>
+      </form>
+    </section>
+    <footer class="main__footer footer">
+      <div class="footer__content">
+        <p class="footer__text">
+          Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+      </p>
+        <p class="footer__text">
+          Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+         </p>
+        <p class="footer__text">
+          Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+        </p>
+        <p class="footer__text">
+          Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+        </p>
+      </div>
+    </footer>
+  </main>
+</div>
 </body>
 </html>

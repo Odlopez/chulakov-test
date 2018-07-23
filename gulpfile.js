@@ -45,7 +45,7 @@ gulp.task("serve", function() {
 
 gulp.task('imagemin', function () {
   gulp.src('source/img/**/*.{png,jpg}')
-      .pipe(tingpng('yfuUnokTCAx6XYDiJ7c5t6ERd7MXWrrd'))
+      .pipe(imagemin('yfuUnokTCAx6XYDiJ7c5t6ERd7MXWrrd'))
       .pipe(gulp.dest('source/img'));
 });
 
@@ -136,7 +136,6 @@ gulp.task("compress", function (cb) {
 gulp.task('webp', () => {
   return gulp.src('source/img/*.{png,jpg}')
     .pipe(webp())
-    .pipe(webp({quality: 90}))
     .pipe(gulp.dest('source/img'))
 });
 
