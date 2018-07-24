@@ -2,11 +2,12 @@
 @font-second: arial, helvetica, sans-serif;
 
 @bg-color: rgb(16, 17, 20);
-@aside-color: spin(@bg-color, 3);
-@aside-color-active: saturate(lighten(@aside-color, 12%), 2%);
-@aside-color-administrative: lighten(saturate(@bg-color, 7%), 5%);
+@header-color: spin(@bg-color, 3);
+@header-color-active: saturate(lighten(@header-color, 12%), 2%);
+@header-color-administrative: lighten(saturate(@bg-color, 7%), 5%);
 @footer-color: spin(desaturate(lighten(@bg-color, 16.5%), 1%), -11);
 @header-color: rgb(0, 174, 239);
+@main-color: lighten(spin(@bg-color, -45), 90%);
 
 @desktop: ~"(min-width: 1000px)";
 @tablet: ~"(min-width: 768px)";

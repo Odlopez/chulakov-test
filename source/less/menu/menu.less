@@ -1,19 +1,33 @@
 .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 
+  .list-reset;
 }
 
-.menu .menu__item {
-
+.menu__item {
+  padding: 30px;
 }
 
-.menu .menu__link {
-
+.menu__link {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: @font-main;
+  text-align: justify;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-.menu .menu__link.menu__link--active {
+.menu__link--active {
+  color: rgb(128, 133, 146);
 
+  background-color: @header-color-active;
 }
 
-.menu .menu__link.menu__link--administrative {
+.menu__link--administrative {
+  color: rgb(128, 133, 146);
 
-}
+  background-color: @header-color-administrative;
+}
