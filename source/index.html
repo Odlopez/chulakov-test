@@ -8,136 +8,151 @@
   <title>Test</title>
 </head>
 <body>
-<div class="container">
-  <header class="header">
-    <div class="logo">
-      <picture>
-        <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
-        <img src="img/logo.png" alt="Логотип Студии Олега Чулакова">
-      </picture>
-    </div>
-    <nav class="navigation">
-      <ul class="navigation__menu menu">
-        <li class="menu__item">
-          <a class="menu__link" href="#">Первая ссылка</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link menu__link--active" href="#">Вторая ссылка (активная)</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#">Третья ссылка</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link menu__link--administrative" href="#">Личный кабинет</a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link menu__link--administrative" href="#">Выйти</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <header class="main__header header-main">
-      <h2 class="header-main__title">Заголовок страницы</h2>
-      <p class="header-main__description">
-        В отличие от пылевого и ионного хвостов, направление поступает
-        в лимногляциальный часовой угол
-      </p>
+  <!-- CONTAINER -->
+  <div class="container">
+    <!-- HEADER -->
+    <header class="header">
+      <!-- logo -->
+      <div class="logo">
+        <a class="logo__link" href="#">
+          <picture>
+            <source type="image/webp" srcset="img/logo.webp 1x, img/logo@2x.webp 2x">
+            <img class="logo__image" src="img/logo.png" alt="Логотип Студии Олега Чулакова"> <!-- Тут напрашивается просто текст, или svg -->
+          </picture>
+        </a>
+      </div>
+      <!-- navigation -->
+      <nav class="navigation">
+        <!-- menu -->
+        <ul class="navigation__menu menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Первая ссылка</a>
+          </li>
+          <li class="menu__item menu__item--active">
+            <a class="menu__link menu__link--active" href="#">Вторая ссылка (активная)</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Третья ссылка</a>
+          </li>
+          <li class="menu__item menu__item--administrative">
+            <a class="menu__link menu__link--administrative" href="#">Личный кабинет</a>
+          </li>
+          <li class="menu__item menu__item--administrative">
+            <a class="menu__link menu__link--administrative" href="#">Выйти</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <section class="main__content main-content">
-      <div class="main-content__info info">
-        <h3 class="info__title">Информация по оплате:</h3>
-        <dl class="info__list">
-          <div class="info__inner">
-            <dt class="info__termin">
-              Нормер счета:
-            </dt>
-            <dd class="info__description">
-              1654654354643254
-            </dd>
-          </div>
-          <div class="info__inner">
-            <dt class="info__termin">
-              Сумма платежа:
-            </dt>
-            <dd class="info__description">
-              100 руб.
-            </dd>
-          </div>
-        </dl>
-      </div>
-      <form class="main__form form" action="https://echo.htmlacademy.ru" method="POST">
-        <h3 class="form__title">Данные банковской карты</h3>
-        <div class="form__basic-data basic-data">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Номер карты</legend>
-            <input class="form__input input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-            <input class="form__input input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-            <input class="form__input input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-            <input class="form__input input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Срок действия</legend>
-            <select class="form__input input select" name="month" id="select-month" required>
-              <option value="" disabled selected style='display:none;'>мес</option>
-              <option class="form__option" value="1">1</option>
-              <option class="form__option" value="2">2</option>
-              <option class="form__option" value="3">3</option>
-              <option class="form__option" value="4">4</option>
-              <option class="form__option" value="5">5</option>
-              <option class="form__option" value="6">6</option>
-              <option class="form__option" value="7">7</option>
-              <option class="form__option" value="8">8</option>
-              <option class="form__option" value="9">9</option>
-              <option class="form__option" value="10">10</option>
-              <option class="form__option" value="11">11</option>
-              <option class="form__option" value="12">12</option>
-            </select>
-            <select class="form__input input select" name="year" id="select-year" required>
-              <option value="" disabled selected style='display:none;'>год</option>
-              <option class="form__option" value="2018">2018</option>
-              <option class="form__option" value="2019">2019</option>
-              <option class="form__option" value="2020">2020</option>
-              <option class="form__option" value="2021">2021</option>
-              <option class="form__option" value="2022">2022</option>
-              <option class="form__option" value="2023">2023</option>
-              <option class="form__option" value="2024">2024</option>
-              <option class="form__option" value="2025">2025</option>
-              <option class="form__option" value="2026">2026</option>
-              <option class="form__option" value="2027">2027</option>
-              <option class="form__option" value="2028">2028</option>
-              <option class="form__option" value="2029">2029</option>
-              <option class="form__option" value="2030">2030</option>
-            </select>
-          </fieldset>
-          <input class="form__input input" type="text" placeholder="Держатель карты" minlength="4" pattern="[a-z]" required>
+    <!-- MAIN -->
+    <main class="main">
+      <!-- header-main -->
+      <header class="main__header header-main">
+        <h2 class="header-main__title">Заголовок страницы</h2>
+        <p class="header-main__description">
+          В отличие от пылевого и ионного хвостов, направление поступает
+          в&nbsp;лимногляциальный&nbsp;часовой&nbsp;угол
+        </p>
+      </header>
+      <!-- MAIN-CONTENT -->
+      <section class="main__content main-content">
+        <!-- info -->
+        <div class="main-content__info info">
+          <h3 class="info__title">Информация по оплате:</h3>
+          <dl class="info__list">
+            <div class="info__inner">
+              <dt class="info__termin">
+                Номер счета:
+              </dt>
+              <dd class="info__description">
+                87123658716587
+              </dd>
+            </div>
+            <div class="info__inner">
+              <dt class="info__termin">
+                Сумма платежа:
+              </dt>
+              <dd class="info__description">
+                100 руб.
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="form__additional-data">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Код CVV2 / CVC2</legend>
-            <input class="form__input form__input--srv input" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
-          </fieldset>
+        <!-- FORM -->
+        <form class="main__form form" action="https://echo.htmlacademy.ru" method="POST">
+          <h3 class="form__title">Данные банковской карты</h3>
+          <!-- basic-data -->
+          <div class="form__basic-data basic-data">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Номер карты</legend>
+              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+            </fieldset>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Срок действия</legend>
+              <select class="form__input form__input--month input select" name="month" id="select-month" required>
+                <option value="" disabled style='display:none;'>мес</option>
+                <option class="form__option" value="1">01</option>
+                <option class="form__option" value="2">02</option>
+                <option class="form__option" value="3">03</option>
+                <option class="form__option" selected value="4">04</option>
+                <option class="form__option" value="5">05</option>
+                <option class="form__option" value="6">06</option>
+                <option class="form__option" value="7">07</option>
+                <option class="form__option" value="8">08</option>
+                <option class="form__option" value="9">09</option>
+                <option class="form__option" value="10">10</option>
+                <option class="form__option" value="11">11</option>
+                <option class="form__option" value="12">12</option>
+              </select>
+              <select class="form__input form__input--year input select" name="year" id="select-year" required>
+                <option value="" disabled style='display:none;'>год</option>
+                <option class="form__option" selected value="2018">2018</option>
+                <option class="form__option" value="2019">2019</option>
+                <option class="form__option" value="2020">2020</option>
+                <option class="form__option" value="2021">2021</option>
+                <option class="form__option" value="2022">2022</option>
+                <option class="form__option" value="2023">2023</option>
+                <option class="form__option" value="2024">2024</option>
+                <option class="form__option" value="2025">2025</option>
+                <option class="form__option" value="2026">2026</option>
+                <option class="form__option" value="2027">2027</option>
+                <option class="form__option" value="2028">2028</option>
+                <option class="form__option" value="2029">2029</option>
+                <option class="form__option" value="2030">2030</option>
+              </select>
+            </fieldset>
+            <input class="form__input input" type="text" placeholder="Держатель карты" minlength="4" pattern="[a-z]" required>
+          </div>
+          <!-- additional-data -->
+          <div class="form__additional-data additional-data">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Код CVV2 / CVC2</legend>
+              <input class="form__input form__input--srv input" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
+            </fieldset>
+          </div>
+          <button class="form__submit button" type="submit">Оплатить</button>
+        </form>
+      </section>
+      <!-- FOOTER -->
+      <footer class="main__footer footer">
+        <div class="footer__content">
+          <p class="footer__text">
+            Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
+          </p>
+          <p class="footer__text">
+            Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
+          </p>
+          <p class="footer__text">
+            Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
+          </p>
+          <p class="footer__text">
+            Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что&nbsp;угол&nbsp;крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно&#8209;тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
+          </p>
         </div>
-        <button class="form__submit button" type="submit">Оплатить</button>
-      </form>
-    </section>
-    <footer class="main__footer footer">
-      <div class="footer__content">
-        <p class="footer__text">
-          Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.
-        </p>
-        <p class="footer__text">
-          Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.
-         </p>
-        <p class="footer__text">
-          Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.
-        </p>
-        <p class="footer__text">
-          Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.
-        </p>
-      </div>
-    </footer>
-  </main>
-</div>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>

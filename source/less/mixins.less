@@ -4,7 +4,31 @@
 }
 
 .reset-list() {
-  list-style: none;
-
   .withoutindentation();
+
+  list-style: none;
+}
+
+.placeholder(@color: rgb(0, 0, 0)) {
+  &::-webkit-input-placeholder {
+    color: @color;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+  }
+
+  &:-ms-input-placeholder {
+    color: @color;
+  }
+
+  &:-moz-placeholder {
+    color: @color;
+  }
+
+  &::placeholder {
+    color: @color;
+
+    opacity: 1;
+  }
 }
