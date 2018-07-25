@@ -83,14 +83,14 @@
           <!-- basic-data -->
           <div class="form__basic-data basic-data">
             <fieldset class="form__fieldset">
-              <legend class="form__legend">Номер карты</legend>
-              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <label class="form__label" for="number-1">Номер карты</label>
+              <input class="form__input form__input--number input" id="number-1" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" id="number-2"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" id="number-3"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" id="number-4"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
             </fieldset>
             <fieldset class="form__fieldset">
-              <legend class="form__legend">Срок действия</legend>
+              <label class="form__label" for="select-month">Срок действия</label>
               <select class="form__input form__input--month input select" name="month" id="select-month" required>
                 <option value="" disabled style='display:none;'>мес</option>
                 <option class="form__option" value="1">01</option>
@@ -128,8 +128,11 @@
           <!-- additional-data -->
           <div class="form__additional-data additional-data">
             <fieldset class="form__fieldset">
-              <legend class="form__legend">Код CVV2 / CVC2</legend>
-              <input class="form__input form__input--srv input" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
+              <label class="form__label" for="cvv">
+                Код CVV2 / CVC2
+                <span class="form__hint">?</span>
+              </label>
+              <input class="form__input form__input--cvv input" id="cvv" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
             </fieldset>
           </div>
           <button class="form__submit button" type="submit">Оплатить</button>

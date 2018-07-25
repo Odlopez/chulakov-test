@@ -1,4 +1,18 @@
 .select {
+  .select-reset;
+  position: relative;
+
   padding-top: 12px;
-  padding-left: 10px;
+  padding-left: 13px;
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    top: 10px;
+    left: 10px;
+    border-left: 1px solid @strip-color;
+    border-bottom: 1px solid @strip-color;
+    transform: rotate(-90deg)
+  }
 }
