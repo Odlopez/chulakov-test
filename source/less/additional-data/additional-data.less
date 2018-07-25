@@ -1,13 +1,12 @@
 .additional-data {
-  width: 370px;
-  padding: 82px 10px 74px 215px;
+  width: 105px;
+  padding: 0;
 
-  background-image: linear-gradient(to bottom, transparent 0px, transparent 26px, @strip-color 26px, @strip-color 68px, transparent 68px, transparent 100%);
-  border: 1px solid rgb(228, 233, 238);
-  border-radius: 10px;
+  background: none;
+  border: none;
 }
 
-@media @mobile-big {
+@media @a-mobile {
   .additional-data {
     width: 135px;
     padding: 0;
@@ -17,12 +16,13 @@
   }
 }
 
-@media @mobile {
+@media @a-tablet {
   .additional-data {
-    width: 105px;
-    padding: 0;
+    width: 370px;
+    padding: 82px 10px 74px 215px;
 
-    background: none;
-    border: none;
+    background-image: linear-gradient(to bottom, transparent 0px, transparent 26px, @strip-color 26px, @strip-color 68px, transparent 68px, transparent 100%);
+    border: 1px solid rgb(228, 233, 238);
+    border-radius: 10px;
   }
 }
