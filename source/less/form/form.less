@@ -1,31 +1,125 @@
 .form {
+  position: relative;
 
+  padding: 5px 0 51px;
 }
 
-.form .form__title {
+.form__title {
+  margin-bottom: 25px;
 
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  font-family: @font-main;
+  color: rgb(56, 61, 67);
 }
 
-.form .form__basic-data {
+.form__basic-data {
+  position: relative;
+  z-index: 2;
 
+  margin-bottom: 35px;
 }
 
-.form .form__fieldset {
+.form__fieldset {
+  margin-bottom: 13px;
+  padding: 0;
 
+  border: none;
 }
 
-.form .form__legend {
+.form__legend {
+  margin-bottom: 3px;
 
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: @font-second;
+  color: rgb(132, 148, 171);
 }
 
-.form .form__input {
+.form__label {
+  position: relative;
 
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 3px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: @font-second;
+  color: rgb(132, 148, 171);
+
+  &[for^="select"] {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+
+      width: 11px;
+      height: 11px;
+
+      border-bottom: 2px solid @strip-color;
+      border-left: 2px solid @strip-color;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      top: 38px;
+      left: 46px;
+    }
+
+    &::after {
+      top: 38px;
+      left: 143px;
+    }
+  }
 }
 
-.form .form__input.form__input--srv {
+.form__hint {
+  position: absolute;
+  top: 32px;
+  right: 10px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+
+  color: @strip-color;
+
+  border: 2px solid @strip-color;
+  border-radius: 50%;
 }
 
-.form .form__additional-data {
+.form__input {
+  & + & {
+    margin-left: 5px;
+  }
 
-}
+  &--number {
+    width: 65px;
+  }
+
+  &--month {
+    width: 70px;
+  }
+
+  &--year {
+    width: 86px;
+  }
+}
+
+.form__additional-data {
+  position: absolute;
+  top: 94px;
+  left: 194px;
+}
+
+.form__submit {
+  width: 174px;
+  height: 38px;
+}
