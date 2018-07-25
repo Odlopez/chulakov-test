@@ -1,9 +1,16 @@
 .basic-data {
   width: 350px;
   min-height: 236px;
-  padding: 21px 14px 14px;
+  padding: 19px 14px 11px;
 
   background-color: @main-color;
   border: 1px solid rgb(228, 233, 238);
   border-radius: 10px;
+}
+
+@media @mobile {
+  .basic-data {
+    width: 320px;
+    margin-left: -29px;
+  }
 }

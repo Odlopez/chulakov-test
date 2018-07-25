@@ -1,7 +1,7 @@
 body {
   min-width: 320px;
-  padding-top: 87px;
   margin: 0 auto;
+  padding-top: 87px;
 
   background-color: @bg-color;
 }
@@ -17,10 +17,18 @@ a {
 
 html {
   box-sizing: border-box;
+
+  font-size: 20px;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+@media @mobile {
+  html {
+    font-size: 15px;
+  }
 }
