@@ -2,7 +2,15 @@
   .reset-list;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 320px;
+
+  background-color: @navigation-color;
+}
+
+.menu__item {
   width: 100%;
 }
 
@@ -16,7 +24,7 @@
   font-size: 0.9rem;
   line-height: 1.2rem;
   font-family: @font-main;
-  text-align: justify;
+  text-align: center;
   color: rgb(255, 255, 255);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 
@@ -39,25 +47,30 @@
 
   &:hover,
   &:focus {
-    box-shadow: 1px 2px 5px @header-color;
-    transform: scale(1.05);
+    box-shadow: 0 0 7px @header-color;
+    transform: scaleY(1.05);
   }
 
   &:active {
-    box-shadow: 0 1px 3px rgb(246, 196, 46);
-    transform: scale(1.02) translateX(-3px);
+    box-shadow: 0 0 3px rgb(246, 196, 46);
     opacity: 0.6;
   }
 }
 
-@media @tablet {
+@media @a-mobile {
   .menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 480px;
+  }
 
-    background-color: @navigation-color;
+  .menu__link {
+    border-radius: 0;
+  }
+}
+
+@media @a-tablet {
+  .menu {
+    flex-flow: row wrap;
+    width: 100%;
   }
 
   .menu__item {
@@ -66,61 +79,40 @@
   }
 
   .menu__link {
-    text-align: center;
-
     border: 2px solid rgba(41, 44, 54, 0.8);
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-  }
-}
-
-@media @mobile-big {
-  .menu {
-    width: 480px;
-  }
-
-  .menu__item {
-    width: 100%;
-  }
-
-  .menu__link {
-    border-radius: 0;
 
     &:hover,
     &:focus {
-      box-shadow: 0 0 7px @header-color;
-      transform: scaleY(1.05);
+      box-shadow: 1px 2px 5px @header-color;
+      transform: scale(1.05);
     }
 
     &:active {
-      box-shadow: 0 0 3px rgb(246, 196, 46);
+      box-shadow: 0 1px 3px rgb(246, 196, 46);
+      transform: scale(1.02) translateX(-3px);
       opacity: 0.6;
     }
   }
 }
 
-@media @mobile {
+
+@media @a-desktop {
   .menu {
-    width: 320px;
+    flex-flow: column nowrap;
+    width: 100%;
   }
 
   .menu__item {
+    flex-grow: 1;
     width: 100%;
   }
 
   .menu__link {
+    text-align: justify;
+
     border-radius: 0;
-
-    &:hover,
-    &:focus {
-      box-shadow: 0 0 7px @header-color;
-      transform: scaleY(1.05);
-    }
-
-    &:active {
-      box-shadow: 0 0 3px rgb(246, 196, 46);
-      opacity: 0.6;
-    }
   }
 }

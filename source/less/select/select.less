@@ -1,5 +1,6 @@
 .select {
   .select-reset;
+
   position: relative;
 
   padding-top: 12px;
@@ -7,12 +8,14 @@
 
   &::before {
     content: "";
-    width: 8px;
-    height: 8px;
     top: 10px;
     left: 10px;
-    border-left: 1px solid @strip-color;
+
+    width: 8px;
+    height: 8px;
+
     border-bottom: 1px solid @strip-color;
-    transform: rotate(-90deg)
+    border-left: 1px solid @strip-color;
+    transform: rotate(-90deg);
   }
 }

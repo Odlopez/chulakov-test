@@ -21,6 +21,7 @@
     height: 3px;
 
     background-color: rgb(255, 255, 255);
+    transition: all 0.15s linear;
   }
 
   &::after {
@@ -39,5 +40,19 @@
   &:active {
     transform: scale(1);
     opacity: 0.6;
+  }
+}
+
+.burger--close {
+  background-image: none;
+
+  &::after {
+    bottom: 50%;
+    transform: translateY(+50%) rotate(-135deg);
+  }
+
+  &::before {
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
   }
 }
