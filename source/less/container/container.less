@@ -1,7 +1,7 @@
 .container {
   display: flex;
   width: 960px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 @media @tablet {
@@ -9,5 +9,21 @@
     flex-direction: column;
     align-items: center;
     width: 768px;
+  }
+}
+
+@media @mobile-big {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 480px;
+  }
+}
+
+@media @mobile {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
   }
 }

@@ -2,8 +2,44 @@
   width: 318px;
 }
 
+.header__button {
+  display: none;
+
+  font-size: 0;
+}
+
 @media @tablet {
   .header {
     width: 639px;
+  }
+}
+
+@media @mobile-big {
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 480px;
+
+    background-color: @navigation-color;
+  }
+
+  .header__button {
+    display: block;
+  }
+}
+
+@media @mobile {
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 320px;
+
+    background-color: @navigation-color;
+  }
+
+  .header__button {
+    display: block;
   }
 }
