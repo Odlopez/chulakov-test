@@ -10,4 +10,5 @@ npm-debug.*
 source/css/*.css
 Thumbs.db
 .vscode
+.gulp/
 build
