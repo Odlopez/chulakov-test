@@ -91,30 +91,28 @@
           <div class="form__basic-data basic-data">
             <fieldset class="form__fieldset">
               <label class="form__label" for="number-1">Номер карты</label>
-              <input class="form__input form__input--number input" id="number-1" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" id="number-2"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" id="number-3"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
-              <input class="form__input form__input--number input" id="number-4"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" name="number-1" id="number-1" type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" name="number-2" id="number-2"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" name="number-3" id="number-3"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
+              <input class="form__input form__input--number input" name="number-4" id="number-4"  type="text" minlength="4" maxlength="4" placeholder="0000" pattern="\d{4}" required>
             </fieldset>
             <fieldset class="form__fieldset">
               <label class="form__label" for="select-month">Срок действия</label>
               <select class="form__input form__input--month input select" name="month" id="select-month" required>
-                <option value="" disabled style='display:none;'>мес</option>
-                <option class="form__option" value="1">01</option>
-                <option class="form__option" value="2">02</option>
-                <option class="form__option" value="3">03</option>
-                <option class="form__option" selected value="4">04</option>
-                <option class="form__option" value="5">05</option>
-                <option class="form__option" value="6">06</option>
-                <option class="form__option" value="7">07</option>
-                <option class="form__option" value="8">08</option>
-                <option class="form__option" value="9">09</option>
+                <option class="form__option" value="01">01</option>
+                <option class="form__option" value="02">02</option>
+                <option class="form__option" value="03">03</option>
+                <option class="form__option" selected value="04">04</option>
+                <option class="form__option" value="05">05</option>
+                <option class="form__option" value="06">06</option>
+                <option class="form__option" value="07">07</option>
+                <option class="form__option" value="08">08</option>
+                <option class="form__option" value="09">09</option>
                 <option class="form__option" value="10">10</option>
                 <option class="form__option" value="11">11</option>
                 <option class="form__option" value="12">12</option>
               </select>
               <select class="form__input form__input--year input select" name="year" id="select-year" required>
-                <option value="" disabled style='display:none;'>год</option>
                 <option class="form__option" selected value="2018">2018</option>
                 <option class="form__option" value="2019">2019</option>
                 <option class="form__option" value="2020">2020</option>
@@ -130,7 +128,9 @@
                 <option class="form__option" value="2030">2030</option>
               </select>
             </fieldset>
-            <input class="form__input input" type="text" placeholder="Держатель карты" minlength="4" pattern="[a-z]" required>
+            <fieldset class="form__fieldset">
+              <input class="form__input input" name="user-name" id="user-name" type="text" placeholder="Держатель карты" pattern="[A-Za-z]{4,}" required>
+            </fieldset>
           </div>
           <!-- end basic-data -->
           <!-- additional-data -->
@@ -139,8 +139,9 @@
               <label class="form__label" for="cvv">
                 Код CVV2 / CVC2
                 <span class="form__hint">?</span>
+                <span class="form__hint-text">Всплывающая подсказка</span>
               </label>
-              <input class="form__input form__input--cvv input" id="cvv" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
+              <input class="form__input form__input--cvv input" name="CVV2/CVC2" id="cvv" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
             </fieldset>
           </div>
           <!-- end additional-data -->
@@ -172,6 +173,12 @@
   </div>
   <!-- end CONTAINER -->
 
+  <!-- SCRIPTS -->
+  <script src="js/link-prevent-default.js"></script>
+  <script src="js/constants.js"></script>
+  <script src="js/hint.js"></script>
+  <script src="js/error-message.js"></script>
   <script src="js/toggle-menu.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 </html>
