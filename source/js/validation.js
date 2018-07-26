@@ -11,22 +11,22 @@
 
   // Функция помечает неверное заполненные поля, или одно конкретное поле, если в качестве аргумента переданн конкретный элемент
   var marksInvalid = function (elem) {
-    if (elem) { // Помечаем конкретный элемент
+    if (elem) { // Помечаем конкретный элемент и создаем кастомное сообщение валидации
       window.hint(elem);
 
       if (!elem.validity.valid) {
-        elem.classList.add(window.constats.CLASSES.ERROR);
+        elem.classList.add(window.constants.CLASSES.ERROR);
       } else {
-        elem.classList.remove(window.constats.CLASSES.ERROR);
+        elem.classList.remove(window.constants.CLASSES.ERROR);
       }
     } else { // Если конкретный элемент не был передан в качестве аргумента, проходимся по всей форме
       Array.prototype.slice.call(form.elements).forEach(function (it) {
         window.hint(it);
-        
+
         if (!it.validity.valid) {
-          it.classList.add(window.constats.CLASSES.ERROR);
+          it.classList.add(window.constants.CLASSES.ERROR);
         } else {
-          it.classList.remove(window.constats.CLASSES.ERROR);
+          it.classList.remove(window.constants.CLASSES.ERROR);
         }
       })
     }
@@ -45,6 +45,18 @@
       }
     });
   };
+
+  // Обработчик события удачной загрузки данных формы
+  var onSuccessfulUpload = function () {
+    window.popup('Данные успешно отправлены!');
+    form.reset();
+  }
+
+  // Обработчик события неудачной загрузки данных формы
+  var onUnsuccessfulUpload = function (text) {
+    window.popup(text);
+  }
+
 
   // Навешивает обработчики события ввода данных в поля форм
   var makeInputsEvent = function () {
@@ -78,7 +90,8 @@
     displayHint();
 
     if (checkFormValidity()) {
-      console.log('Тут будет функция, которая отправит данные формы');
+      var data = new FormData();
+      window.backend('POST', window.constants.URL, onSuccessfulUpload, onUnsuccessfulUpload, data);
     }
   }
 
