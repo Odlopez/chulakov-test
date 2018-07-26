@@ -17,6 +17,10 @@
       ENTER: 13,
       ESC: 27
     },
-    CLOSING_POPUP_TIME: 3000
+    CLOSING_POPUP_TIME: 3000,
+    selectStyles: {
+      FONT_WEIGHT: '700',
+      COLOR: 'rgba(227, 232, 237, 0.3)'
+    }
   }
 })();

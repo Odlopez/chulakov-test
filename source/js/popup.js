@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  // Создает попап со системным сообщением
+  // Создает попап с системным сообщением
   window.popup = function (text) {
     var template = document.querySelector('.' + window.constants.CLASSES.TEMPLATE);
     var popup = template.querySelector('.' + window.constants.CLASSES.POPUP).cloneNode(true);

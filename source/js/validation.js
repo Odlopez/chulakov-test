@@ -3,13 +3,48 @@
 (function () {
   var form = document.querySelector('.form');
   var submit = document.querySelector('.form__submit');
+  var firstFieldset = document.querySelector('.form__fieldset');
+  var firstSelect = document.querySelector('.select');
+
+  // Переводит фокус на следующий элемент от текущего (который передается в аргумент)
+  var focuseOnNextElement = function (element) {
+    element.nextElementSibling.focus();
+  }
+
+  // Вешает на поля ввода номера карточки обработчик события, который автоматически переводит фокус на следующее поле, когда текущее заполнено
+  var changeInputFocus = function () {
+    /*
+      Обработчик события ввода данных в поле номера карточки.
+      Если введено 4 символа, запускает функцию перевода фокуса на следующий элемент
+    */
+    var onElementInput = function (e) {
+      var currentItem = e.target;
+      if (currentItem.value.length === 4 && currentItem.nextElementSibling) {
+        focuseOnNextElement(currentItem);
+      }
+    }
+
+    Array.prototype.slice.call(firstFieldset.children).forEach(function (it) {
+      it.addEventListener('input', onElementInput);
+    });
+  };
+
+  // Вешает на первый select обработчик события, который переводит фокус на следующий select, при внесении изменения в пером.
+  var changeSelectFocus = function () {
+    // Обработчик события изменения значения в первом select'е
+    var onElementChange = function (e) {
+      focuseOnNextElement(e.target);
+    }
+
+    firstSelect.addEventListener('change', onElementChange);
+  };
 
   // Обработчик события ввода данных в поля формы
   var onElementInput = function (e) {
     marksInvalid(e.target);
   }
 
-  // Функция помечает неверное заполненные поля, или одно конкретное поле, если в качестве аргумента переданн конкретный элемент
+  // Функция помечает неверно заполненные поля, или одно конкретное поле, если в качестве аргумента передан конкретный элемент
   var marksInvalid = function (elem) {
     if (elem) { // Помечаем конкретный элемент и создаем кастомное сообщение валидации
       window.hint(elem);
@@ -57,7 +92,6 @@
     window.popup(text);
   }
 
-
   // Навешивает обработчики события ввода данных в поля форм
   var makeInputsEvent = function () {
     Array.prototype.slice.call(form.elements).forEach(function (it) {
@@ -96,4 +130,6 @@
   }
 
   submit.addEventListener('click', onsubmitClick);
+  changeInputFocus();
+  changeSelectFocus();
 })();

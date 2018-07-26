@@ -15,7 +15,7 @@
   var year = today.getFullYear();
   var allowedIntervalYears = 50;
 
-  // Создает кастомное сообщение о неправильно заполненном поле.
+  // Создает кастомное сообщение о неправильно заполненном поле, в зависимости от того, что именно не так ввел пользователь
   window.hint = function (element) {
     if (element.validity.tooLong) {
       element.setCustomValidity('Введенное значение больше заданной максимальной длинны');

@@ -25,13 +25,14 @@
 
     removeErrorMessage();
 
+    // Если кастомное сообщение не пустое, создаем 'подсказку' для пользователя
     if (text) {
       message.textContent = text;
       message.classList.add(window.constants.CLASSES.ERROR_MESSAGE);
       message.addEventListener('click', onMessageClick);
 
       parent.insertAdjacentElement('afterend', message);
-    } else (
+    } else ( // Иначе удаляем сообщене с подсказкой о природе невалидности поля
       removeErrorMessage()
     )
   }

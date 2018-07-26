@@ -5,16 +5,15 @@
   window.backend = function (method, url, onLoad, onError, data) {
     var xhr = new XMLHttpRequest();
 
-    xhr.responseType = 'json';
-
-    xhr.timeout = window.constants.TIMEOUT;
-
     xhr.open(method, url);
+
+    xhr.responseType = 'json';
+    xhr.timeout = window.constants.TIMEOUT;
 
     xhr.send(data);
 
     // При успешной загрузке данных, выполняет переданные в качестве аргументов функции.
-    xhr.addEventListener('load', function () {
+    xhr.addEventListener('load', function (e) {
       try {
         onLoad();
       } catch (err) {
