@@ -9,7 +9,7 @@
     'month': 'Месяц необходимо ввести в формате двух цифр',
     'year': 'Месяц необходимо ввести в формате 4 цифр',
     'user-name': 'Поле должно содержать символы латинского алфавита не менее 4-х',
-    'CVV2/CVC2': 'В поле должно быть введенно 3 цифры',
+    'CVV2/CVC2': 'Введите 3 цифры',
   };
   var today = new Date();
   var year = today.getFullYear();
@@ -24,7 +24,7 @@
     } else if (element.validity.patternMismatch) {
       element.setCustomValidity(hintText[element.name]);
     } else if (element.validity.valueMissing) {
-      element.setCustomValidity('Поле не должно быть пустым');
+      element.setCustomValidity('Заполните поле');
     } else {
       element.setCustomValidity('');
     }
