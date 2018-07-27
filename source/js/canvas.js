@@ -3,7 +3,7 @@
 (function () {
   var CIRCLE_RADIUS = 6;
   var LINE_WIDTH = 3;
-  var ANIMATION_LINE_DURATION = 1000;
+  var ANIMATION_LINE_DURATION = 1500;
   var ANIMATION_POINT = {
     DURATION: 150,
     INTERVAL: 5

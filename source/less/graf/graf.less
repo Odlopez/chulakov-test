@@ -15,7 +15,27 @@
   align-items: center;
 }
 
+.graf__secret {
+  position: absolute;
+  left: 0;
+
+  width: 100px;
+  height: 150px;
+
+  background-image: url("../img/scelet.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: center 75%;
+  z-index: -1000;
+
+  &--active {
+    animation: secret 2s linear;
+  }
+}
+
 .graf__canvas--inner {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,4 +136,50 @@
   background-color: transparent;
   border: 5px solid rgb(0, 162, 121);
   border-radius: 10px;
+}
+
+@keyframes secret {
+  0% {
+    transform: none;
+  }
+
+  20% {
+    transform: translateX(-55%) rotate(-45deg);
+  }
+
+  60% {
+    transform: translateX(-55%) rotate(-45deg);
+  }
+
+  62% {
+    transform: translateX(-55%) rotate(-35deg);
+  }
+
+  66% {
+    transform: translateX(-55%) rotate(-55deg);
+  }
+
+  70% {
+    transform: translateX(-55%) rotate(-35deg);
+  }
+
+  74% {
+    transform: translateX(-55%) rotate(-55deg);
+  }
+
+  78% {
+    transform: translateX(-55%) rotate(-35deg);
+  }
+
+  80% {
+    transform: translateX(-55%) rotate(-45deg);
+  }
+
+  90% {
+    transform: translateX(-55%) rotate(-45deg);
+  }
+
+  100% {
+    transform: none;
+  }
 }
