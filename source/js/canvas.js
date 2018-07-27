@@ -155,8 +155,9 @@
   };
 
   // Обработчик события изменения цветового input'а. Делает цвета кнопок и линий - заданными.
-  var onColorInputChange = function () {
+  var onColorInputChange = function (e) {
     isRandom = false;
+    e.target.style.borderColor = e.target.value;
   }
 
   // Обработчик события клика по холсту. Собственно, основная функция.
