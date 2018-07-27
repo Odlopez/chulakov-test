@@ -6,10 +6,10 @@
     MAX: 150000
   }
   var ANIMATION_TIME = 2000;
-  var SECRET_CLASS = 'graf__secret--active';
+  var SECRET_CLASS = 'graph__secret--active';
   var MEDIA_BOUNDS = [685, 820, 1200];
   var delay = 30000;
-  var secret = document.querySelector('.graf__secret');
+  var secret = document.querySelector('.graph__secret');
 
   // Генерирует и возвращает случайное число в пределах заданных параметров
   var getRandomNumber = function (to, from) {
@@ -21,7 +21,6 @@
   // Бесконечный цикл без операторов цикла? Выспавшись, я бы такого не придумал.)
   var timer = function (func, duration) {
     setTimeout(func, duration);
-
   };
 
   // Запускает 'секретку'.
@@ -36,9 +35,7 @@
       }, ANIMATION_TIME);
     }
 
-    var delay = getRandomNumber(INTERVAL.MIN, INTERVAL.MAX);
-
-    timer(runSecret, delay);
+    timer(runSecret, getRandomNumber(INTERVAL.MIN, INTERVAL.MAX));
   }
 
   timer(runSecret, delay);
