@@ -3,11 +3,11 @@
 (function () {
   var CIRCLE_RADIUS = 6;
   var LINE_WIDTH = 3;
-  var ANIMATION_LINE_DURATION = 500;
+  var ANIMATION_LINE_DURATION = 1000;
   var ANIMATION_POINT = {
-    DURATION: 100,
+    DURATION: 150,
     INTERVAL: 5
-  }
+  };
   var lineQuantity = 2;
   var container = document.querySelector('.graf__canvas--inner');
   var reset = document.querySelector('.graf__button--reset');
@@ -46,10 +46,26 @@
     return 'rgb(' + getRandomNumber(255) + ',' + getRandomNumber(255) + ',' + getRandomNumber(255) + ')';
   };
 
+  /*
+    Обработчик события изменения разрешения окна. Подгоняет холст под размеры родителя.
+    Пересчитывает стартовые координаты, сбрасывает все расставленные до этого точки.
+  */
+  var onWindowResize = function () {
+    canvas.width = container.clientWidth;
+    canvas.height = container.clientHeight;
+
+    shift = {
+      x: canvas.getBoundingClientRect().x,
+      y: canvas.getBoundingClientRect().y
+    };
+
+    points.length = 0;
+  }
+
   // Очищает полотно и массив с данными отрисованных точек
   var resetCanvas = function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    points = [];
+    onWindowResize();
   }
 
   // Записывает данные созданной точки в общий массив с данными по всем точкам
@@ -178,9 +194,5 @@
   select.addEventListener('change', onSelectChange);
   randomButton.addEventListener('click', onRandomButtonClick);
   colorInput.addEventListener('change', onColorInputChange);
-
-  window.addEventListener('resize', function () {
-    canvas.width = container.clientWidth;
-    canvas.height = container.clientHeight;
-  });
+  window.addEventListener('resize',onWindowResize);
 })();
