@@ -23,6 +23,7 @@
 
 .form__fieldset {
   position: relative;
+
   margin-bottom: 13px;
   padding: 0;
 
@@ -56,6 +57,8 @@
       border-bottom: 2px solid @strip-color;
       border-left: 2px solid @strip-color;
       transform: rotate(-45deg);
+
+      pointer-events: none;
     }
 
     &::before {
