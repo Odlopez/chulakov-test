@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Test 2</title>
+</head>
+<body class="graf">
+  <div class="graf__container">
+    <div class="graf__canvas--inner">
+      <canvas class="graf__canvas" id="canvas" width="1000" height="500"></canvas>
+    </div>
+    <div class="graf__interactive-inner">
+      <button class="graf__button graf__button--reset" type="button">Сбросить</button>
+      <button class="graf__button graf__button--random" type="button">Случайный цвет</button>
+      <label class="graf__label graf__label--select" for="line-quantity">Количество линий</label>
+      <select class="graf__select" name="line-quantity" id="line-quantity">
+          <option class="graf__option" value="1">1</option>
+          <option class="graf__option" selected value="2">2</option>
+          <option class="graf__option" value="3">3</option>
+          <option class="graf__option" value="4">4</option>
+          <option class="graf__option" value="5">5</option>
+        </select>
+      <label class="graf__label graf__label--color" for="graf-color">Выбор цвета линии</label>
+      <input class="graf__input" id="graf-color" type="color">
+    </div>
+  </div>
+
+  <script src="js/canvas.js"></script>
+</body>
+</html>
