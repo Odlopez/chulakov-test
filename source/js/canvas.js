@@ -9,10 +9,10 @@
     INTERVAL: 5
   };
   var lineQuantity = 2;
-  var container = document.querySelector('.graf__canvas--inner');
-  var reset = document.querySelector('.graf__button--reset');
-  var randomButton = document.querySelector('.graf__button--random');
-  var colorInput = document.querySelector('.graf__input');
+  var container = document.querySelector('.graph__canvas--inner');
+  var reset = document.querySelector('.graph__button--reset');
+  var randomButton = document.querySelector('.graph__button--random');
+  var colorInput = document.querySelector('.graph__input');
   var select = document.querySelector('select');
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
