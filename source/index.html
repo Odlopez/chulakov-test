@@ -28,7 +28,7 @@
         <!-- menu -->
         <ul class="navigation__menu menu">
           <li class="menu__item">
-            <a class="menu__link" href="#">Первая ссылка</a>
+            <a class="menu__link" href="graf.html">Первая ссылка</a>
           </li>
           <li class="menu__item menu__item--active">
             <a class="menu__link menu__link--active" href="#">Вторая ссылка (активная)</a>
@@ -141,7 +141,7 @@
                 <span class="form__hint">?</span>
                 <span class="form__hint-text">Всплывающая подсказка</span>
               </label>
-              <input class="form__input form__input--cvv input" name="CVV2/CVC2" id="cvv" type="text" minlength="3" maxlength="3" pattern="\d{3}" required>
+              <input class="form__input form__input--cvv input" name="CVV2/CVC2" id="cvv" type="text" maxlength="3" pattern="\d{3}" required>
             </fieldset>
           </div>
           <!-- end additional-data -->
@@ -173,12 +173,25 @@
   </div>
   <!-- end CONTAINER -->
 
+  <div class="template">
+    <div class="popup">
+      <p class="popup__message">
+
+      </p>
+    </div>
+  </div>
+
   <!-- SCRIPTS -->
-  <script src="js/link-prevent-default.js"></script>
   <script src="js/constants.js"></script>
+  <script src="js/select.js"></script>
+  <script src="js/polifill.js"></script>
+  <script src="js/link-prevent-default.js"></script>
   <script src="js/hint.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/backend.js"></script>
   <script src="js/error-message.js"></script>
   <script src="js/toggle-menu.js"></script>
   <script src="js/validation.js"></script>
+   <!-- end SCRIPTS -->
 </body>
 </html>

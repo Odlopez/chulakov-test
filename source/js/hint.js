@@ -9,13 +9,13 @@
     'month': 'Месяц необходимо ввести в формате двух цифр',
     'year': 'Месяц необходимо ввести в формате 4 цифр',
     'user-name': 'Поле должно содержать символы латинского алфавита не менее 4-х',
-    'CVV2/CVC2': 'В поле должно быть введенно 3 цифры',
+    'CVV2/CVC2': 'Введите 3 цифры',
   };
   var today = new Date();
   var year = today.getFullYear();
   var allowedIntervalYears = 50;
 
-  // Создает кастомное сообщение о неправильно заполненном поле.
+  // Создает кастомное сообщение о неправильно заполненном поле, в зависимости от того, что именно не так ввел пользователь
   window.hint = function (element) {
     if (element.validity.tooLong) {
       element.setCustomValidity('Введенное значение больше заданной максимальной длинны');
@@ -24,7 +24,7 @@
     } else if (element.validity.patternMismatch) {
       element.setCustomValidity(hintText[element.name]);
     } else if (element.validity.valueMissing) {
-      element.setCustomValidity('Поле не должно быть пустым');
+      element.setCustomValidity('Заполните поле');
     } else {
       element.setCustomValidity('');
     }

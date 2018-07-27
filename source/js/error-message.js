@@ -16,22 +16,23 @@
     var removeErrorMessage = function () {
       var oldMessage = parent.nextElementSibling;
 
-      if (oldMessage && oldMessage.classList.contains(window.constats.CLASSES.ERROR_MESSAGE)) {
+      if (oldMessage && oldMessage.classList.contains(window.constants.CLASSES.ERROR_MESSAGE)) {
         oldMessage.parentElement.removeChild(oldMessage);
 
         message.removeEventListener('click', onMessageClick);
       }
     }
-    
+
     removeErrorMessage();
 
+    // Если кастомное сообщение не пустое, создаем 'подсказку' для пользователя
     if (text) {
       message.textContent = text;
-      message.classList.add(window.constats.CLASSES.ERROR_MESSAGE);
+      message.classList.add(window.constants.CLASSES.ERROR_MESSAGE);
       message.addEventListener('click', onMessageClick);
 
       parent.insertAdjacentElement('afterend', message);
-    } else (
+    } else ( // Иначе удаляем сообщене с подсказкой о природе невалидности поля
       removeErrorMessage()
     )
   }
