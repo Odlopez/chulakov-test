@@ -1,0 +1,1 @@
+"use strict";!function(){var t=document.querySelectorAll(".select");Array.prototype.slice.call(t).forEach(function(t){var o;o=t,Array.prototype.slice.call(o.options).forEach(function(t,o){o%2||(t.style.fontWeight=window.constants.selectStyles.FONT_WEIGHT),t.style.backgroundColor=window.constants.selectStyles.COLOR})})}();

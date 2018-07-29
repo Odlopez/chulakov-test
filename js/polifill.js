@@ -1,0 +1,1 @@
+"use strict";Element.prototype.insertAdjacentElement||(Element.prototype.insertAdjacentElement=function(e,t){"afterend"===e&&this.parentElement.insertBefore(t,this.nextElementSibling)});
