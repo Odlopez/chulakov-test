@@ -98,11 +98,12 @@
       Пока не истечет заданное время, вызывает функцию отрисовывающую точки,
       и передает ей в качестве аргумента увеличивающий коэфффициент.
     */
-    setInterval(function () {
+    var intervalID = setInterval(function () {
       var timePassed = new Date() - start;
       var progress = timePassed / ANIMATION_POINT.DURATION;
 
       if (timePassed > ANIMATION_POINT.DURATION) {
+        clearInterval(intervalID);
         return;
       }
 
